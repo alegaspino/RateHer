@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">RateHer</string>
+
+    <string name="button_start">Start</string>
+    <string name="button_rate">Rate</string>
+
+    <string name="textview_gchoice">Blah blah</string>
+    <string name="textview_nchoice">Number of pictures</string>
+
+    <string name="edittext_nchoice">Number</string>
+
+    <string name="radio_reallydontlike">Really Dont Like</string>
+    <string name="radio_dontlike">Dont Like</string>
+    <string name="radio_neutral">Neutral</string>
+    <string name="radio_like">Like</string>
+    <string name="radio_reallylike">Really Like</string>
+
+    <string-array name="g_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

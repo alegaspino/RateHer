@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInputActivity">
+
+    <TextView
+        android:id="@+id/textview_gchoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_gchoice"
+
+        app:layout_constraintRight_toLeftOf="@+id/spinner_gchoice"
+        app:layout_constraintBottom_toTopOf="@+id/textview_nchoice" />
+
+    <Spinner
+        android:id="@+id/spinner_gchoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@+id/textview_gchoice"
+        app:layout_constraintBottom_toTopOf="@+id/edittext_nchoice" />
+
+    <TextView
+        android:id="@+id/textview_nchoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_nchoice"
+
+        app:layout_constraintTop_toBottomOf="@+id/textview_gchoice"
+        app:layout_constraintRight_toLeftOf="@+id/edittext_nchoice" />
+
+    <EditText
+        android:id="@+id/edittext_nchoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edittext_nchoice"
+        android:inputType="number"
+
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gchoice"
+        app:layout_constraintLeft_toRightOf="@+id/textview_nchoice" />
+
+    <Button
+        android:id="@+id/button_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_rate"
+        android:onClick="doRate" />
+
+</android.support.constraint.ConstraintLayout>

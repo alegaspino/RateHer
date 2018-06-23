@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RatingActivity">
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radiogroup_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radio_reallydontlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_reallydontlike"
+            android:onClick="recordClick"/>
+        <RadioButton
+            android:id="@+id/radio_dontlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_dontlike"
+            android:onClick="recordClick"/>
+        <RadioButton
+            android:id="@+id/radio_neutral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_neutral"
+            android:onClick="recordClick"/>
+        <RadioButton
+            android:id="@+id/radio_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_like"
+            android:onClick="recordClick"/>
+        <RadioButton
+            android:id="@+id/radio_reallylike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_reallylike"
+            android:onClick="recordClick"/>
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
