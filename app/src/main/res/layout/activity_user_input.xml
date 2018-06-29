@@ -46,7 +46,9 @@
         android:id="@+id/button_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="doRate"
         android:text="@string/button_rate"
-        android:onClick="doRate" />
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="305dp" />
 
 </android.support.constraint.ConstraintLayout>

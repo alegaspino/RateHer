@@ -19,4 +19,7 @@
         <item>Male</item>
         <item>Female</item>
     </string-array>
+
+
+    <string name="imageview_test">ImageView Test</string>
 </resources>
