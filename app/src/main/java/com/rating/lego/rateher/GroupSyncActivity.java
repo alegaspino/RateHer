@@ -1,5 +1,6 @@
 package com.rating.lego.rateher;
 
+import android.net.wifi.p2p.WifiP2pDeviceList;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -10,6 +11,9 @@ import android.content.BroadcastReceiver;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pDevice;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GroupSyncActivity extends AppCompatActivity {
 
     private final IntentFilter intentFilter = new IntentFilter();
@@ -17,6 +21,20 @@ public class GroupSyncActivity extends AppCompatActivity {
     WifiP2pManager.Channel channel;
     WifiP2pManager manager;
     BroadcastReceiver receiver;
+
+    List<WifiP2pDevice> peers = new ArrayList<WifiP2pDevice>();
+
+    WifiP2pManager.PeerListListener peerListListener = new WifiP2pManager.PeerListListener() {
+        @Override
+        public void onPeersAvailable(WifiP2pDeviceList wifiP2pDeviceList) {
+            List<WifiP2pDevice> refreshedPeers = (List<WifiP2pDevice>) wifiP2pDeviceList.getDeviceList();
+
+            if (!refreshedPeers.equals(peers)) {
+                peers.clear();
+                peers.addAll(refreshedPeers);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +48,18 @@ public class GroupSyncActivity extends AppCompatActivity {
 
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
+
+        manager.discoverPeers(channel, new WifiP2pManager.ActionListener() {
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFailure(int i) {
+
+            }
+        });
     }
 
     @Override
