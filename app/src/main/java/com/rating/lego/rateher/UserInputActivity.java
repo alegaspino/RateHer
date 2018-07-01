@@ -24,9 +24,7 @@ public class UserInputActivity extends AppCompatActivity {
     }
 
     public void doRate(View view) {
-       // Intent newActivity = new Intent(this, RatingActivity.class);
         Intent newActivity = new Intent(this, GroupSyncActivity.class);
         startActivity(newActivity);
-        finish();
     }
 }

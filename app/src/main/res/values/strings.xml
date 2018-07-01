@@ -3,6 +3,8 @@
 
     <string name="button_start">Start</string>
     <string name="button_rate">Rate</string>
+    <string name="button_wifiToggle">Wifi Toggle</string>
+    <string name="button_discoverToggle">Discover Toggle</string>
 
     <string name="textview_gchoice">Blah blah</string>
     <string name="textview_nchoice">Number of pictures</string>
